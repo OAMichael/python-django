@@ -1,0 +1,24 @@
+{% extends "base_page.html" %}
+
+{% block page-title %}{{ result_title }}{% endblock %}
+
+{% block page-lead %}{% endblock %}
+
+{% block content %}
+<div class="container-sm px-5 py-5" id="form-result">
+    <h2 class="pb-2 border-bottom">Request result</h2>
+    <p>Dear <span class="fst-italic">{{ username }}</span>,<br/>
+       <span class="fw-bold">{{ result_comment }}</span>.
+    </p>
+
+    <h2 class="pb-2 border-bottom" style="margin-top: 100px;">Navigate</h2>
+    <ul>
+        {% if api == gl_const %}
+        <li><a href="/add-function-gl">Submit one more function</a></li>
+        {% elif api == vk_const %}
+        <li><a href="/add-function-vk">Submit one more function</a></li>
+        {% endif %}
+        <li><a href="/">Back to home</a></li>
+    </ul>
+</div>
+{% endblock %}

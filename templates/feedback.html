@@ -1,0 +1,37 @@
+{% extends "base_page.html" %}
+
+{% block page-title %}
+Provide us a feedback
+{% endblock %}
+
+{% block page-lead %}
+You have to fill Name, Email and Feedback fields
+{% endblock %}
+
+
+{% block content %}
+<div class="container-sm p-4" id="feedback-form">
+    <form method="post">
+        <div class="row px-5 py-2">
+            <h3>Your Contacts</h3>
+        </div>
+        <div class="row px-5 py-2">
+            <div class="col-md-6">
+                <label for="username">Name<span style="color:red">*</span></label>
+                <input type="text" class="form-control input-lg" name="username" id="username" placeholder="Michael" value required>
+            </div>
+            <div class="col-md-6">
+                <label for="email">Email<span style="color:red">*</span></label>
+                <input type="text" class="form-control input-lg" name="email" id="email" placeholder="Michael@Michael.com" value required>
+            </div>
+        </div>
+        <div class="px-5 py-2">
+            <label for="feedback">Feedback<span style="color:red">*</span></label>
+            <textarea type="text" class="form-control input-lg" name="feedback" id="feedback" rows="3" value required></textarea>
+        </div>
+        <div class="px-5 py-2" style="text-align: center;">
+            <button type="submit" class="btn btn-primary" formaction="/send-feedback">Send!</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

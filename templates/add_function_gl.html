@@ -1,0 +1,48 @@
+{% extends "base_page.html" %}
+
+{% block page-title %}
+Add OpenGL function
+{% endblock %}
+
+{% block page-lead %}
+You have to fill Function Signature, Description and Feature fields
+{% endblock %}
+
+
+{% block content %}
+<div class="container-sm p-4" id="gl-form">
+    <form method="post">
+        <div class="row px-5 py-2">
+            <h3>Your Contacts</h3>
+        </div>
+        <div class="row px-5 py-2">
+            <div class="col-md-6">
+                <label for="username">Name<span style="color:red">*</span></label>
+                <input type="text" class="form-control input-lg" name="username" id="username" placeholder="Michael" value required>
+            </div>
+            <div class="col-md-6">
+                <label for="email">Email</label>
+                <input type="text" class="form-control input-lg" name="email" id="email" placeholder="Michael@Michael.com">
+            </div>
+        </div>
+        <div class="row px-5 py-2">
+            <h3>Function</h3>
+        </div>
+        <div class="px-5 py-2">
+            <label for="signature">Function Signature<span style="color:red">*</span></label>
+            <textarea type="text" class="form-control input-lg" name="signature" id="signature" rows="3" value required></textarea>
+        </div>
+        <div class="px-5 py-2">
+            <label for="desc">Description<span style="color:red">*</span></label>
+            <textarea type="text" class="form-control input-lg" name="desc" id="desc" rows="3" value required></textarea>
+        </div>
+        <div class="px-5 py-2">
+            <label for="feature">Feature<span style="color:red">*</span></label>
+            <input type="text" class="form-control input-lg" name="feature" id="feature" value required>
+        </div>
+        <div class="px-5 py-2" style="text-align: center;">
+            <button type="submit" class="btn btn-primary" formaction="/send-function-gl">Add!</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

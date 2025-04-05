@@ -1,0 +1,70 @@
+{% extends "base_page.html" %}
+
+{% block page-title %}
+Computer Graphics APIs
+{% endblock %}
+
+{% block page-lead %}
+The purpose of this site is to help learning computer graphics programming APIs such as <a href="https://www.opengl.org" style="color:rgb(85, 134, 164); font-weight: bold;">OpenGL</a>
+and <a href="https://www.vulkan.org" style="color:rgb(172, 22, 44); font-weight: bold;">Vulkan</a> by memorization what each API function does and its possible pitfalls
+{% endblock %}
+
+{% block content %}
+<div class="container px-4 py-5" id="project-contents">
+    <h2 class="pb-2 border-bottom">Check these out</h2>
+    <div class="row">
+        <div class="col">
+            <div class="d-flex m-4 p-4 bg-light rounded-3 border">
+                <div>
+                    <h3 class="fs-2">
+                        <a href="https://www.opengl.org" class="text-decoration-none" style="color:rgb(85, 134, 164); font-weight: bold;">OpenGL functions list</a>
+                    </h3>
+                    <p>Here you can see different OpenGL functions and their purpose</p>
+                    <a href="/functions-list-gl" class="btn btn-primary" style="background-color: rgb(85, 134, 164);">Start!</a>
+                </div>
+            </div>
+            <div class="d-flex m-4 p-4 bg-light rounded-3 border">
+                <div>
+                    <h3 class="fs-2">
+                        <a href="https://www.vulkan.org" class="text-decoration-none" style="color:rgb(172, 22, 44); font-weight: bold;">Vulkan functions list</a>
+                    </h3>
+                    <p>Here you can see different Vulkan functions and their purpose</p>
+                    <a href="/functions-list-vk" class="btn btn-primary" style="background-color: rgb(172, 22, 44);">Start!</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="d-flex m-4 p-4 bg-light rounded-3 border">
+                <div>
+                    <h3 class="fs-2" style="color:rgb(85, 134, 164); font-weight: bold;">Add OpenGL function</h3>
+                    <p>Append your custom OpenGL function to the list for training</p>
+                    <a href="/add-function-gl" class="btn btn-primary" style="background-color: rgb(85, 134, 164);">Add!</a>
+                </div>
+            </div>
+            <div class="d-flex m-4 p-4 bg-light rounded-3 border">
+                <div>
+                    <h3 class="fs-2" style="color:rgb(172, 22, 44); font-weight: bold;">Add Vulkan function</h3>
+                    <p>Append your custom Vulkan function to the list for training</p>
+                    <a href="/add-function-vk" class="btn btn-primary" style="background-color: rgb(172, 22, 44);">Add!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2 class="pb-2 border-bottom">This might be interesting!</h2>
+    <div class="d-flex m-4 p-4 bg-light rounded-3 border">
+        <div>
+            <h3 class="fs-2">Statistics</h3>
+            <p>What functions database already has</p>
+            <a href="/statistics" class="btn btn-primary">Check!</a>
+        </div>
+    </div>
+    <h2 class="pb-2 border-bottom">Tell us what you think!</h2>
+    <div class="d-flex m-4 p-4 bg-light rounded-3 border">
+        <div>
+            <h3 class="fs-2">Feedback</h3>
+            <p>Provide us a feedback</p>
+            <a href="/feedback" class="btn btn-primary">Send!</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

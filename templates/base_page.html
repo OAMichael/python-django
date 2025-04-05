@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block pagetitle %}{% endblock %}</title>
+    <link rel="icon" type="image/png" href="/static/CG-logo.png">
+    <!-- load static -->
+    {% load static %}
+    <!-- CSS -->
+    <link href="{% static 'bootstrap.min.css' %}" rel="stylesheet">
+</head>
+<body>
+<main>
+    <div class="container border">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom" style="background-color:#ff0000;">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <img src="{% static 'CG-logo.png' %}" alt="Dragon", height="120" style="margin-left: 10px;margin-right: 10px;"/>
+                <span style="color:white; font-size: 80px; font-style: italic; font-weight: bold; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">Computer Graphics APIs</span>
+            </a>
+        </header>
+        <div style="display: flex;">
+            <div class="px-5 mx-2 py-1 bg-light rounded-3 border" style="flex-grow: 1;" id="title-box">
+                <div class="container-fluid py-5">
+                    <h1 class="display-4 fw-bold" style="color: #ff0000;">{% block page-title %}{% endblock %}</h1>
+                    <p class="col-md-8 fs-5">{% block page-lead %}{% endblock %}</p>
+                </div>
+            </div>
+            <div class="p-1 mx-2 bg-light rounded-3 border">
+                <div class="container-fluid py-5">
+                    <p style="align-items: center; text-align: center; margin: 20px;">
+                        <a href="https://www.opengl.org" title="OpenGL"><img src="{% static 'opengl-logo.png' %}"  alt="OpenGL"  height="52"/></a>
+                        <br>
+                        <a href="https://www.opengl.org" class="fs-6 text-decoration-none" style="color:rgb(85, 134, 164); font-weight: bold;">Visit opengl.org</a>
+                    </p>
+                    <p style="align-items: center; text-align: center; margin: 20px;">
+                        <a href="https://www.vulkan.org" title="Vulkan"><img src="{% static 'vulkan-logo.png' %}"  alt="Vulkan"  height="32"/></a>
+                        <br>
+                        <a href="https://www.vulkan.org" class="fs-6 text-decoration-none" style="color:rgb(172, 22, 44); font-weight: bold;">Visit vulkan.org</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        {% block content %}{% endblock %}
+        <footer class="footer pt-2 px-4 mt-4 mb-2 text-muted border-top">
+            <div style="text-align: end;">
+                <a href="https://github.com/OAMichael/python-django" class="mx-4 text-decoration-none" style="color:black;" title="GitHub"><img src="{% static 'github-logo.png' %}" class="mx-2" alt="GitHub" style="height: 1.5em;"/>GitHub</a>
+                © 2025
+            </div>
+        </footer>
+    </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,94 @@
+{% extends "base_page.html" %}
+
+{% block page-title %}
+Functions Statistics
+{% endblock %}
+
+{% block page-lead %}
+Here you can see overall statistics for 
+    <a href="https://www.opengl.org" class="text-decoration-none" style="color:rgb(85, 134, 164); font-weight: bold;">OpenGL</a> and
+    <a href="https://www.vulkan.org" class="text-decoration-none" style="color:rgb(172, 22, 44); font-weight: bold;">Vulkan</a> functions in the database
+{% endblock %}
+
+{% block content %}
+<div class="container px-4 py-5" id="stats">
+    <h2 class="pb-2 border-bottom" style="color:rgb(85, 134, 164);">OpenGL</h2>
+    <div class="row">
+        <div class="col">
+            <div class="d-flex m-1 p-2 bg-light rounded-3 border">
+                <h3 class="fs-2"><span class="text-muted">Total functions:</span> {{ functions_gl_all }}</h3>
+            </div>
+        </div>
+        <div class="col">
+            <div class="d-flex m-1 p-2 bg-light rounded-3 border">
+                <h3 class="fs-2"><span class="text-muted">Original functions:</span> {{ functions_gl_db }}</h3>
+            </div>
+        </div>
+        <div class="col">
+            <div class="d-flex m-1 p-2 bg-light rounded-3 border">
+                <h3 class="fs-2"><span class="text-muted">User functions:</span> {{ functions_gl_user }}</h3>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="d-flex mx-1 my-3 p-2 bg-light rounded-3 border">
+                <div>
+                    <h3 class="fs-2 text-muted">Functions feature distribution</h3>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <tbody>
+                                {% for feature, count in functions_gl_features.items %}
+                                <tr>
+                                    <td class="py-3">{{ feature }}:</td>
+                                    <td class="py-3"><b>{{ count }}</b></td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2 class="pb-2 border-bottom" style="color:rgb(172, 22, 44);">Vulkan</h2>
+    <div class="row">
+        <div class="col">
+            <div class="d-flex m-1 p-2 bg-light rounded-3 border">
+                <h3 class="fs-2"><span class="text-muted">Total functions:</span> {{ functions_vk_all }}</h3>
+            </div>
+        </div>
+        <div class="col">
+            <div class="d-flex m-1 p-2 bg-light rounded-3 border">
+                <h3 class="fs-2"><span class="text-muted">Original functions:</span> {{ functions_vk_db }}</h3>
+            </div>
+        </div>
+        <div class="col">
+            <div class="d-flex m-1 p-2 bg-light rounded-3 border">
+                <h3 class="fs-2"><span class="text-muted">User functions:</span> {{ functions_vk_user }}</h3>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="d-flex mx-1 my-3 p-2 bg-light rounded-3 border">
+                <div>
+                    <h3 class="fs-2 text-muted">Functions feature distribution</h3>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <tbody>
+                                {% for feature, count in functions_vk_features.items %}
+                                <tr>
+                                    <td class="py-3">{{ feature }}:</td>
+                                    <td class="py-3"><b>{{ count }}</b></td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

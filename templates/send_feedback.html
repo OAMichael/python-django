@@ -1,0 +1,16 @@
+{% extends "base_page.html" %}
+
+{% block page-title %}Success!{% endblock %}
+
+{% block page-lead %}{% endblock %}
+
+{% block content %}
+<div class="container-sm px-5 py-5" id="form-result">
+    <h2 class="pb-2 border-bottom">Dear <span class="fst-italic">{{ username }}</span>, thank you for feedback!</h2>
+    <h2 class="pb-2 border-bottom" style="margin-top: 100px;">Navigate</h2>
+    <ul>
+        <li><a href="/feedback">Send another feedback</a></li>
+        <li><a href="/">Back to home</a></li>
+    </ul>
+</div>
+{% endblock %}
