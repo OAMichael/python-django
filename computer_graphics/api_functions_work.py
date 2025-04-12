@@ -75,7 +75,12 @@ def add_function(function_info, api):
     if email is None:
         email = ""
 
-    db_entries.create(username, email, signature, desc, feature)
+    db_entries.create(username=username,
+                      email=email,
+                      signature=signature,
+                      description=desc,
+                      feature=feature)
+
     return ADD_FUNCTION_SUCCESS
 
 
