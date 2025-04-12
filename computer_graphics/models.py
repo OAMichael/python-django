@@ -1,7 +1,9 @@
+'''Django models for internal database'''
 from django.db import models
 
 
 class FunctionGL(models.Model):
+    '''Django model for OpenGL function'''
     username = models.TextField()
     email = models.EmailField()
     signature = models.TextField()
@@ -10,6 +12,7 @@ class FunctionGL(models.Model):
 
 
 class FunctionVK(models.Model):
+    '''Django model for Vulkan function'''
     username = models.TextField()
     email = models.EmailField()
     signature = models.TextField()
@@ -18,6 +21,7 @@ class FunctionVK(models.Model):
 
 
 class Feedback(models.Model):
+    '''Django model for user feedback message'''
     username = models.TextField()
     email = models.EmailField()
     feedback = models.TextField()
