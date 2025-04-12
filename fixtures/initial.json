@@ -1,0 +1,86 @@
+[
+{
+    "model": "computer_graphics.functiongl",
+    "pk": 2,
+    "fields": {
+        "username": "",
+        "email": "",
+        "signature": "void glGetTextures(GLsizei n, GLuint* textures)",
+        "description": "Returns n texture names in textures. There is no guarantee that the names form a contiguous set of integers; however, it is guaranteed that none of the returned names was in use immediately before the call to glGenTextures.\r\n\r\nThe generated textures have no dimensionality; they assume the dimensionality of the texture target to which they are first bound (see glBindTexture).\r\n\r\nTexture names returned by a call to glGenTextures are not returned by subsequent calls, unless they are first deleted with glDeleteTextures.",
+        "feature": "OpenGL 2.0"
+    }
+},
+{
+    "model": "computer_graphics.functiongl",
+    "pk": 3,
+    "fields": {
+        "username": "",
+        "email": "",
+        "signature": "void glBindTexture(\tGLenum target, GLuint texture)",
+        "description": "glBindTexture lets you create or use a named texture. Calling glBindTexture with target set to GL_TEXTURE_1D, GL_TEXTURE_2D, GL_TEXTURE_3D or GL_TEXTURE_CUBE_MAP and texture set to the name of the new texture binds the texture name to the target. When a texture is bound to a target, the previous binding for that target is automatically broken.",
+        "feature": "OpenGL 2.0"
+    }
+},
+{
+    "model": "computer_graphics.functiongl",
+    "pk": 4,
+    "fields": {
+        "username": "",
+        "email": "",
+        "signature": "void EGLImageTargetTexture2DOES(enum target, eglImageOES image)",
+        "description": "Set to TEXTURE_EXTERNAL_OES defines the currently bound external texture object to be a target sibling of the image. The width, height, format, type, internalformat, border, and image data are all determined based on the specified eglImageOES image. Any sibling previously associated with this external texture object is deleted.",
+        "feature": "GL_OES_EGL_image_external"
+    }
+},
+{
+    "model": "computer_graphics.functionvk",
+    "pk": 1,
+    "fields": {
+        "username": "",
+        "email": "",
+        "signature": "VkResult vkCreateInstance(const VkInstanceCreateInfo* pCreateInfo, const VkAllocationCallbacks* pAllocator, VkInstance* pInstance)",
+        "description": "vkCreateInstance verifies that the requested layers exist. If not, vkCreateInstance will return VK_ERROR_LAYER_NOT_PRESENT. Next vkCreateInstance verifies that the requested extensions are supported (e.g. in the implementation or in any enabled instance layer) and if any requested extension is not supported, vkCreateInstance must return VK_ERROR_EXTENSION_NOT_PRESENT. After verifying and enabling the instance layers and extensions the VkInstance object is created and returned to the application. If a requested extension is only supported by a layer, both the layer and the extension need to be specified at vkCreateInstance time for the creation to succeed.",
+        "feature": "Vulkan 1.0"
+    }
+},
+{
+    "model": "computer_graphics.functionvk",
+    "pk": 2,
+    "fields": {
+        "username": "",
+        "email": "",
+        "signature": "VkResult vkEnumeratePhysicalDevices(VkInstance instance, uint32_t* pPhysicalDeviceCount, VkPhysicalDevice* pPhysicalDevices)",
+        "description": "If pPhysicalDevices is NULL, then the number of physical devices available is returned in pPhysicalDeviceCount. Otherwise, pPhysicalDeviceCount must point to a variable set by the application to the number of elements in the pPhysicalDevices array, and on return the variable is overwritten with the number of handles actually written to pPhysicalDevices. If pPhysicalDeviceCount is less than the number of physical devices available, at most pPhysicalDeviceCount structures will be written, and VK_INCOMPLETE will be returned instead of VK_SUCCESS, to indicate that not all the available physical devices were returned.",
+        "feature": "Vulkan 1.0"
+    }
+},
+{
+    "model": "computer_graphics.functionvk",
+    "pk": 3,
+    "fields": {
+        "username": "",
+        "email": "",
+        "signature": "VkResult vkCreateRayTracingPipelinesKHR(VkDevice device, VkDeferredOperationKHR deferredOperation, VkPipelineCache pipelineCache, uint32_t createInfoCount, const VkRayTracingPipelineCreateInfoKHR* pCreateInfos, const VkAllocationCallbacks* pAllocator, VkPipeline* pPipelines)",
+        "description": "Creates a new ray tracing pipeline object.",
+        "feature": "VK_KHR_ray_tracing_pipeline"
+    }
+},
+{
+    "model": "computer_graphics.feedback",
+    "pk": 1,
+    "fields": {
+        "username": "Michael",
+        "email": "michael@michael.michael",
+        "feedback": "Thank you for your site!"
+    }
+},
+{
+    "model": "computer_graphics.feedback",
+    "pk": 2,
+    "fields": {
+        "username": "Michael",
+        "email": "michael@michael.michael",
+        "feedback": "Thank you again!"
+    }
+}
+]
